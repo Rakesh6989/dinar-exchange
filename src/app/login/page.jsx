@@ -24,50 +24,74 @@ export default function LoginPage() {
   const handleTogglePassword = () => setShowPassword((prev) => !prev);
 
   const handleLogin = () => {
-    // handle login logic here
     alert(`Email: ${email}\nPassword: ${password}`);
   };
 
   return (
-    <Box className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-100 to-blue-200 px-4">
-      <Card className="max-w-md w-full shadow-xl rounded-3xl">
-        <CardContent className="p-8">
+    <Box className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-100 to-purple-200 px-4">
+      <Card className="w-full max-w-md rounded-3xl shadow-2xl">
+        <CardContent className="p-8 sm:p-10">
           <Box className="flex justify-center mb-6">
-            <Avatar className="bg-blue-500 w-16 h-16">
+            <Avatar className="bg-blue-600 w-16 h-16 shadow-md">
               <LockIcon fontSize="large" />
             </Avatar>
           </Box>
-          <Typography variant="h5" align="center" className="font-bold mb-6 text-gray-800">
-            Welcome Back
+
+          <Typography
+            variant="h5"
+            align="center"
+            className="font-bold mb-6 text-gray-800"
+          >
+            Sign in to your account
           </Typography>
 
-          <Box className="space-y-4">
+          <Box className="flex flex-col gap-6">
             <TextField
-              label="Email Address"
+              label="Email"
               fullWidth
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              variant="outlined"
+              slotProps={{
+                input: {
+                  className: "py-3 px-2",
+                },
+                inputLabel: {
+                  shrink: true,
+                },
+              }}
             />
+
             <TextField
               label="Password"
               fullWidth
               type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton onClick={handleTogglePassword} edge="end">
-                      {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
+              variant="outlined"
+              slotProps={{
+                input: {
+                  className: "py-3 px-2",
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton onClick={handleTogglePassword} edge="end">
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                },
+                inputLabel: {
+                  shrink: true,
+                },
               }}
             />
 
-            <Box className="flex justify-end">
-              <Typography variant="body2" className="text-blue-600 cursor-pointer hover:underline">
-                Forgot Password?
+            <Box className="-mt-2 flex justify-end">
+              <Typography
+                variant="body2"
+                className="text-sm text-blue-600 hover:underline cursor-pointer"
+              >
+                Forgot password?
               </Typography>
             </Box>
 
@@ -76,15 +100,19 @@ export default function LoginPage() {
               color="primary"
               fullWidth
               size="large"
-              className="rounded-full py-3"
+              className="rounded-full py-3 font-semibold"
               onClick={handleLogin}
             >
               Login
             </Button>
 
-            <Typography align="center" variant="body2" className="text-gray-600 mt-4">
-              Don't have an account?{" "}
-              <span className="text-blue-600 cursor-pointer hover:underline">
+            <Typography
+              variant="body2"
+              align="center"
+              className="text-gray-600 pt-2"
+            >
+              Don&apos;t have an account?{" "}
+              <span className="text-blue-600 font-medium hover:underline cursor-pointer">
                 Register
               </span>
             </Typography>

@@ -1,7 +1,8 @@
 "use client";
 
-import TopBar from "./components/home/Topbar";
-import Navbar from "./components/home/Navbar";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import dynamic from "next/dynamic";
 import { Container, Box } from "@mui/material";
 import RenderTesto from "./components/Secondary/RenderTesto";
@@ -25,19 +26,19 @@ const FeatureCard = dynamic(() => import("./components/Secondary/FeatureCard"));
 function Page() {
   const features = [
     {
-      icon: "https://plus.unsplash.com/premium_photo-1681487966346-cb4a0c7a2a72?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Easy Returns",
-      subtitle: "and Refunds",
+      Icon: LocalShippingIcon,
+      title: "Free Delivery",
+      subtitle: "Across India",
     },
     {
-      icon: "/icons/global-fashion.png",
-      title: "Global Fashion",
-      subtitle: "Made in India",
+      Icon: CreditCardIcon,
+      title: "No Cost EMI",
+      subtitle: "3 Easy Payments",
     },
     {
-      icon: "/icons/trusted.png",
-      title: "Trusted by",
-      subtitle: "50 Lakh + Customers",
+      Icon: SupportAgentIcon,
+      title: "24/7 Support",
+      subtitle: "We're here to help",
     },
   ];
   const categoryData = [
@@ -120,6 +121,7 @@ function Page() {
           </Box>
         </Container>
       </div>
+
       <MostWantedCategory categories={categoryData} />
       <RenderTesto />
       <ProductList />

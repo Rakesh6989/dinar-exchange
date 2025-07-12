@@ -8,7 +8,8 @@ import ComboCard from "./ComboCard";
 
 const comboData = [
   {
-    image: "https://plus.unsplash.com/premium_photo-1673356302067-aac3b545a362?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://plus.unsplash.com/premium_photo-1673356302067-aac3b545a362?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "PLAIN T-SHIRTS",
     price: 899,
     variants: "Available in 12+ colors | S to 5XL",
@@ -21,12 +22,15 @@ const comboData = [
     variants: "Available in 10+ colors",
   },
   {
-    image: "https://plus.unsplash.com/premium_photo-1673356302067-aac3b545a362?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://plus.unsplash.com/premium_photo-1673356302067-aac3b545a362?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "PLAIN T-SHIRTS",
     price: 899,
     variants: "Available in 12+ colors | S to 5XL",
-  },{
-    image: "https://plus.unsplash.com/premium_photo-1673356302067-aac3b545a362?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    image:
+      "https://plus.unsplash.com/premium_photo-1673356302067-aac3b545a362?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "PLAIN T-SHIRTS",
     price: 899,
     variants: "Available in 12+ colors | S to 5XL",
@@ -54,6 +58,7 @@ export default function ComboSlider() {
         <Swiper
           modules={[Navigation]}
           navigation
+          loop={true} // 🔁 THIS enables infinite loop
           spaceBetween={20}
           slidesPerView={1.2}
           breakpoints={{

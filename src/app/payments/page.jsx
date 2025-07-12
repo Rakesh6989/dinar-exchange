@@ -46,7 +46,6 @@ export default function CoolPaymentPage() {
         />
 
         <CardContent className="grid md:grid-cols-2 gap-10">
-          {/* Left Side */}
           <Box className="space-y-5">
             <Typography variant="h6" className="font-semibold text-gray-700">
               Billing Details
@@ -105,7 +104,6 @@ export default function CoolPaymentPage() {
             )}
           </Box>
 
-          {/* Right Side */}
           <Box className="bg-white border border-gray-200 rounded-xl p-6 space-y-6 shadow-inner">
             <Typography variant="h6" className="text-gray-700 font-bold">
               Order Summary
@@ -138,7 +136,6 @@ export default function CoolPaymentPage() {
         </CardContent>
       </Card>
 
-      {/* Modal */}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle className="text-green-600 font-bold text-center">
           ✅ Payment Successful

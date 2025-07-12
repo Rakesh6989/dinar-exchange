@@ -51,7 +51,6 @@ export default function TrackOrderPage() {
       {orders.map((order) => (
         <Card key={order.id} elevation={2}>
           <CardContent className="flex flex-col sm:flex-row gap-4">
-            {/* Left Image */}
             <div className="w-full sm:w-1/3 flex justify-center sm:justify-start">
               <img
                 src={order.image}
@@ -60,9 +59,7 @@ export default function TrackOrderPage() {
               />
             </div>
 
-            {/* Right Content */}
             <div className="flex-1 space-y-3">
-              {/* Title & Price Row */}
               <div className="flex justify-between items-start">
                 <div>
                   <Typography variant="subtitle1" fontWeight={600}>
@@ -86,7 +83,6 @@ export default function TrackOrderPage() {
                 </div>
               </div>
 
-              {/* Stepper */}
               <Stepper activeStep={order.activeStep} alternativeLabel>
                 {order.steps.map((label) => (
                   <Step key={label}>
@@ -95,7 +91,6 @@ export default function TrackOrderPage() {
                 ))}
               </Stepper>
 
-              {/* Delivery Info */}
               <Typography variant="body2" color="text.secondary">
                 {order.deliveryInfo}
               </Typography>
@@ -104,7 +99,6 @@ export default function TrackOrderPage() {
                 {order.expected}
               </Typography>
 
-              {/* Buttons */}
               <div className="flex gap-2 justify-end pt-2">
                 <Button variant="outlined" size="small" color="error">
                   Cancel Item

@@ -3,7 +3,7 @@ import { Box, Typography, Link, Container } from "@mui/material";
 
 export default function TopBar() {
   return (
-    <Box sx={{ backgroundColor: "black", color: "white", py: 1, p: 2.5  }}>
+    <Box sx={{ backgroundColor: "black", color: "white", py: 1, p: 2.5 }}>
       <Container
         maxWidth="lg"
         sx={{
@@ -29,8 +29,8 @@ export default function TopBar() {
             fontWeight="bold"
           >
             TRACK ORDER
-          </Link>{" "}
-          /{" "}
+          </Link>
+          /
           <Link
             href="/payments"
             underline="none"
@@ -52,7 +52,7 @@ export default function TopBar() {
           </Link>{" "}
           /{" "}
           <Link
-            href="/signup"
+            href="/sign-up"
             underline="none"
             color="inherit"
             fontWeight="bold"
