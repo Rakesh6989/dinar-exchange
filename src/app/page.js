@@ -54,42 +54,42 @@ function Page() {
     {
       title: "OVERSIZED T-SHIRTS",
       image:
-        "https://images.unsplash.com/photo-1618354691601-bbbffce17563?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "CARGOS",
       image:
-        "https://images.unsplash.com/photo-1593032457869-54c8efaa3c24?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1471575266009-b52cd3a488c8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "POLOS",
       image:
-        "https://images.unsplash.com/photo-1520974735194-87b192836d67?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "JEANS",
       image:
-        "https://images.unsplash.com/photo-1622448526942-f0ad58ae0c2d?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "PRINTED T-SHIRTS",
       image:
-        "https://images.unsplash.com/photo-1591047139829-0ef13b8f3c5f?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "JOGGERS",
       image:
-        "https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1563389234808-52344934935c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "PLAIN T-SHIRTS",
       image:
-        "https://images.unsplash.com/photo-1602810318491-5501f58e4b18?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1527719327859-c6ce80353573?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "BOXERS",
       image:
-        "https://images.unsplash.com/photo-1600180758890-593f5b02a2e3?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 

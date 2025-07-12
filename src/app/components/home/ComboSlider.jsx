@@ -38,7 +38,6 @@ const comboData = [
     price: 1599,
     variants: "Available in 8+ colors",
   },
-  // Add more as needed
 ];
 
 export default function ComboSlider() {

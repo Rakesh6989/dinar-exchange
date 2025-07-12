@@ -25,7 +25,6 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useRef, useState } from "react";
-import Image from "next/image";
 
 const navItems = [
   { label: "TOPWEAR", dropdown: ["T-Shirts", "Shirts", "Hoodies"] },
@@ -61,9 +60,11 @@ export default function Navbar() {
           disableGutters
           sx={{ justifyContent: "space-between", width: "100%" }}
         >
-          <Typography variant="h6" fontWeight="bold">
-            SITARE WARGI
-          </Typography>
+          <Link href="/">
+            <Typography variant="h6" fontWeight="bold">
+              SITARE WARGI
+            </Typography>
+          </Link>
 
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
             {navItems.map((item, index) => {
@@ -105,20 +106,17 @@ export default function Navbar() {
             })}
           </Box>
 
-          {/* Mobile Menu Icon */}
           <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1 }}>
             <IconButton onClick={() => setDrawerOpen(true)}>
               <MenuIcon />
             </IconButton>
           </Box>
-
-          {/* Right Icons */}
           <Box sx={{ display: "flex", gap: 2, mr: 2 }}>
             <IconButton>
               <SearchIcon />
             </IconButton>
-            <Link href="/cart" passHref legacyBehavior>
-              <IconButton component="a">
+            <Link href="/cart">
+              <IconButton>
                 <Badge badgeContent={5} color="warning">
                   <ShoppingCartIcon />
                 </Badge>

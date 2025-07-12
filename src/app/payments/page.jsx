@@ -17,7 +17,11 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
+  Avatar,
 } from "@mui/material";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 
 export default function CoolPaymentPage() {
   const [tab, setTab] = useState(0);
@@ -28,32 +32,35 @@ export default function CoolPaymentPage() {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-10">
-      <Card className="w-full max-w-4xl shadow-2xl rounded-3xl">
+    <Box className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 flex items-center justify-center px-4 py-10">
+      <Card className="w-full max-w-5xl shadow-2xl rounded-3xl">
         <CardHeader
+          avatar={<Avatar><CreditCardIcon /></Avatar>}
           title={
-            <Typography variant="h5" className="text-center font-bold text-gray-800">
-              💳 Complete Your Payment
+            <Typography variant="h5" className="font-bold text-gray-800">
+              Secure Payment Gateway
             </Typography>
           }
+          subheader={<Typography className="text-sm text-gray-500">Powered by MUI & Tailwind</Typography>}
+          className="text-center"
         />
-        <CardContent className="grid md:grid-cols-2 gap-8">
-          {/* Left Side - Billing + Payment Info */}
-          <Box className="space-y-4">
-            <Typography variant="subtitle1" fontWeight="600">
-              Billing Information
+
+        <CardContent className="grid md:grid-cols-2 gap-10">
+          {/* Left Side */}
+          <Box className="space-y-5">
+            <Typography variant="h6" className="font-semibold text-gray-700">
+              Billing Details
             </Typography>
             <TextField label="Full Name" fullWidth />
             <TextField label="Email Address" fullWidth />
             <TextField label="Phone Number" fullWidth />
-            <TextField label="Shipping Address" fullWidth />
+            <TextField label="Shipping Address" fullWidth multiline rows={2} />
 
             <Divider className="!my-6" />
 
-            <Typography variant="subtitle1" fontWeight="600">
+            <Typography variant="h6" className="font-semibold text-gray-700">
               Payment Method
             </Typography>
-
             <Tabs
               value={tab}
               onChange={handleTabChange}
@@ -62,16 +69,14 @@ export default function CoolPaymentPage() {
               indicatorColor="primary"
               className="mb-4"
             >
-              <Tab label="UPI" />
-              <Tab label="Card" />
-              <Tab label="Wallet" />
-              <Tab label="Netbanking" />
+              <Tab icon={<CurrencyRupeeIcon />} label="UPI" />
+              <Tab icon={<CreditCardIcon />} label="Card" />
+              <Tab icon={<AccountBalanceWalletIcon />} label="Wallet" />
+              <Tab icon={<CurrencyRupeeIcon />} label="Netbanking" />
             </Tabs>
 
-            {/* Tab Panels */}
-            {tab === 0 && (
-              <TextField label="UPI ID" fullWidth placeholder="yourname@upi" />
-            )}
+            {tab === 0 && <TextField label="UPI ID" fullWidth placeholder="yourname@upi" />}
+
             {tab === 1 && (
               <Box className="space-y-4">
                 <TextField label="Card Number" fullWidth placeholder="1234 5678 9012 3456" />
@@ -81,6 +86,7 @@ export default function CoolPaymentPage() {
                 </Box>
               </Box>
             )}
+
             {tab === 2 && (
               <TextField select label="Choose Wallet" fullWidth defaultValue="">
                 <MenuItem value="gpay">Google Pay</MenuItem>
@@ -88,6 +94,7 @@ export default function CoolPaymentPage() {
                 <MenuItem value="amazon">Amazon Pay</MenuItem>
               </TextField>
             )}
+
             {tab === 3 && (
               <TextField select label="Select Bank" fullWidth defaultValue="">
                 <MenuItem value="sbi">SBI</MenuItem>
@@ -98,23 +105,23 @@ export default function CoolPaymentPage() {
             )}
           </Box>
 
-          {/* Right Side - Summary + Pay Button */}
-          <Box className="bg-white border border-gray-200 rounded-xl p-6 space-y-6 shadow-sm">
-            <Typography variant="h6" fontWeight="bold">
+          {/* Right Side */}
+          <Box className="bg-white border border-gray-200 rounded-xl p-6 space-y-6 shadow-inner">
+            <Typography variant="h6" className="text-gray-700 font-bold">
               Order Summary
             </Typography>
-            <Box className="flex justify-between">
-              <span>Product</span>
-              <span>₹849</span>
+            <Box className="flex justify-between text-sm">
+              <Typography>Product Name</Typography>
+              <Typography>₹849</Typography>
             </Box>
-            <Box className="flex justify-between">
-              <span>Shipping</span>
-              <span>₹50</span>
+            <Box className="flex justify-between text-sm">
+              <Typography>Shipping Charges</Typography>
+              <Typography>₹50</Typography>
             </Box>
             <Divider />
             <Box className="flex justify-between font-semibold text-lg">
-              <span>Total</span>
-              <span>₹899</span>
+              <Typography>Total</Typography>
+              <Typography>₹899</Typography>
             </Box>
 
             <Button
@@ -123,22 +130,23 @@ export default function CoolPaymentPage() {
               fullWidth
               size="large"
               onClick={handlePay}
+              className="rounded-full py-3 text-base"
             >
-              Pay ₹899 Now
+              Pay ₹899 Securely
             </Button>
           </Box>
         </CardContent>
       </Card>
 
-      {/* Modal on Payment Success */}
+      {/* Modal */}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle className="text-green-600 font-bold text-center">
           ✅ Payment Successful
         </DialogTitle>
         <DialogContent className="text-center">
-          <Typography>Your order has been placed successfully.</Typography>
+          <Typography>Your order has been placed successfully!</Typography>
           <Typography className="text-sm text-gray-500 mt-2">
-            A confirmation has been sent to your email.
+            A confirmation email has been sent to your inbox.
           </Typography>
         </DialogContent>
         <DialogActions>
