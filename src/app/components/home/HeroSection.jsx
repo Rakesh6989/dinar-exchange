@@ -21,7 +21,7 @@ export default function HeroSection() {
 
   useEffect(() => {
     setIsVisible(true)
-    
+
     // Mouse parallax effect
     const handleMouseMove = (e) => {
       const rect = containerRef.current?.getBoundingClientRect()
@@ -47,19 +47,19 @@ export default function HeroSection() {
   ]
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-center flex items-center justify-center"
     >
       {/* Animated Background */}
-      <div 
+      <div
         ref={backgroundRef}
         className="absolute inset-0 opacity-30"
         style={{
           background: `radial-gradient(circle at ${50 + mousePosition.x * 20}% ${50 + mousePosition.y * 20}%, rgba(255, 165, 0, 0.3) 0%, transparent 50%)`
         }}
       />
-      
+
       {/* Floating Particles */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
@@ -82,20 +82,22 @@ export default function HeroSection() {
         <div className="relative mb-8">
           <h1
             ref={headingRef}
-            className={`text-4xl sm:text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400 tracking-tight leading-tight transform transition-all duration-1000 ease-out ${
-              isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-12 opacity-0 scale-95'
-            }`}
+            className={`text-4xl sm:text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400 tracking-tight leading-tight transform transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-12 opacity-0 scale-95'
+              }`}
             style={{ animationDelay: '0.1s' }}
           >
             Welcome to{' '}
             <span className="relative inline-block">
-              <span className="relative z-10">Dinar Exchange</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 blur-xl opacity-30 animate-pulse" />
+              <span className="relative z-10 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                Dinar Exchange
+              </span>
+             
             </span>
             <br />
             <span className="text-3xl sm:text-4xl md:text-5xl text-orange-300">Australia</span>
           </h1>
-          
+
+
           {/* Sparkle Effect */}
           <AutoAwesomeIcon className="absolute -top-4 -right-4 w-8 h-8 text-yellow-400 animate-spin" style={{ animationDuration: '3s' }} />
         </div>
@@ -103,9 +105,8 @@ export default function HeroSection() {
         {/* Subheading with Typewriter Effect */}
         <h2
           ref={subHeadingRef}
-          className={`mt-6 text-xl sm:text-2xl md:text-3xl font-bold text-orange-300 tracking-wide transform transition-all duration-1000 ease-out ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-          }`}
+          className={`mt-6 text-xl sm:text-2xl md:text-3xl font-bold text-orange-300 tracking-wide transform transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            }`}
           style={{ animationDelay: '0.3s' }}
         >
           Your Premier Hub for Iraqi Dinar Transactions
@@ -114,29 +115,27 @@ export default function HeroSection() {
         {/* Enhanced Description */}
         <p
           ref={paraRef}
-          className={`mt-8 max-w-4xl mx-auto text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed font-light transform transition-all duration-1000 ease-out ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-          }`}
+          className={`mt-8 max-w-4xl mx-auto text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed font-light transform transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
+            }`}
           style={{ animationDelay: '0.6s' }}
         >
-          At Dinar Exchange Australia, we stand as your <span className="text-orange-400 font-semibold">reliable and trusted partner</span> in 
-          navigating the intricate world of the Iraqi Dinar. Whether you are an experienced investor in collectible currency items or a 
+          At Dinar Exchange Australia, we stand as your <span className="text-orange-400 font-semibold">reliable and trusted partner</span> in
+          navigating the intricate world of the Iraqi Dinar. Whether you are an experienced investor in collectible currency items or a
           hobby currency collector seeking to comprehend Iraqi currency dynamics, our platform is tailored to your diverse needs.
         </p>
 
         {/* Call to Action Buttons */}
         <div
           ref={ctaRef}
-          className={`mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center transform transition-all duration-1000 ease-out ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-          }`}
+          className={`mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center transform transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
+            }`}
           style={{ animationDelay: '0.8s' }}
         >
           <button className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-full overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50">
             <span className="relative z-10">Start Trading</span>
             <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
           </button>
-          
+
           <button className="group px-8 py-4 border-2 border-orange-400 text-orange-400 font-bold rounded-full transform transition-all duration-300 hover:bg-orange-400 hover:text-white hover:scale-105 hover:shadow-lg">
             Learn More
           </button>
@@ -145,9 +144,8 @@ export default function HeroSection() {
         {/* Feature Cards */}
         <div
           ref={featuresRef}
-          className={`mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto transform transition-all duration-1000 ease-out ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-          }`}
+          className={`mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto transform transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+            }`}
           style={{ animationDelay: '1.0s' }}
         >
           {features.map((feature, index) => (
