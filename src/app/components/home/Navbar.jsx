@@ -61,20 +61,9 @@ export default function TopNavbar() {
         </div>
       </div>
 
-      {/* Glowing Call Button with Orbiting Effect */}
-      <div className="fixed bottom-6 right-6 sm:right-10 z-50 group">
-        <div className="relative flex items-center justify-center">
-          <div className="absolute animate-spin-slow border-[2px] border-blue-300 rounded-full h-14 w-14 opacity-50"></div>
-          <div className="absolute animate-ping h-14 w-14 bg-blue-400 opacity-20 rounded-full blur-sm"></div>
+    
 
-          <button className="relative bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 pl-5 pr-6 rounded-full shadow-lg flex items-center gap-2 transition-all duration-300 group-hover:shadow-blue-400/60">
-            <CallIcon fontSize="small" />
-            Call me
-            {/* Sparkle star */}
-            <span className="absolute top-0 right-0 h-2 w-2 bg-white rounded-full animate-ping opacity-70"></span>
-          </button>
-        </div>
-      </div>
+
     </div>
   )
 }

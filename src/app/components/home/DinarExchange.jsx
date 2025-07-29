@@ -386,7 +386,7 @@ const DinarExchangeWebsite = () => {
                   Click Here
                 </button>
                 <div className="mt-4 flex justify-center lg:justify-end">
-                  <button className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-full text-white font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                  <button className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-full text-white font-semibold transition-all z-110 relative duration-300 transform hover:scale-105 flex items-center gap-2">
                     📞 Call me
                   </button>
                 </div>
