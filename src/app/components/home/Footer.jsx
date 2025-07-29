@@ -84,7 +84,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-white mb-3">LOCATION</h3>
             <p className="text-gray-400 leading-relaxed">
-              support@sitare-wargi.com
+              support@Dinar-exchange.com
               <br />
               Techno Park California
               <br />

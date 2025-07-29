@@ -6,11 +6,16 @@ import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import dynamic from "next/dynamic";
 import { Container, Box } from "@mui/material";
 import RenderTesto from "./components/Secondary/RenderTesto";
-import ProductList from "./components/home/ProductList";
+import ProductList from "./components/home/DinarExchange";
 import Footer from "./components/home/Footer";
-const HeroSlider = dynamic(() => import("./components/home/HeroSlider"), {
+import { useRef } from "react";
+import DinarPricingSection from "./components/home/DinarPricingSection";
+const MainNavBar = dynamic(() => import("./components/home/MainNavBar"), {
   loading: () => <p>Loading slider...</p>,
 });
+
+import HeroSection from "./components/home/HeroSection";
+
 const MostWantedCategory = dynamic(
   () => import("./components/Secondary/MostWantedCategory"),
   {
@@ -41,6 +46,10 @@ function Page() {
       subtitle: "We're here to help",
     },
   ];
+
+  const scrollTargetRef = useRef(null);
+
+
   const categoryData = [
     {
       title: "SHIRTS",
@@ -96,35 +105,12 @@ function Page() {
 
   return (
     <div>
-      <HeroSlider />
-      <ComboSlider />
+      <MainNavBar />
 
-      <div className="flex flex-col items-center gap-6 py-6">
-        <p className="text-sm text-center text-gray-800 font-medium">
-          NO COST | 3 EASY EMIs – Activate at Checkout
-        </p>
-        <Container maxWidth="lg">
-          <Box
-            sx={{
-              display: "grid",
-              gap: 2,
-              gridTemplateColumns: {
-                xs: "1fr",
-                sm: "1fr 1fr",
-                md: "1fr 1fr 1fr",
-              },
-            }}
-          >
-            {features.map((f, i) => (
-              <FeatureCard key={i} {...f} />
-            ))}
-          </Box>
-        </Container>
-      </div>
+      <HeroSection />
 
-      <MostWantedCategory categories={categoryData} />
-      <RenderTesto />
-      <ProductList />
+      <DinarPricingSection />      <RenderTesto />
+      <ProductList ref={scrollTargetRef} />
     </div>
   );
 }
